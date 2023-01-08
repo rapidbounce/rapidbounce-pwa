@@ -14,7 +14,7 @@ install_requirements = [
 
 setup(
     name='rapidbounce-pwa',
-    version='0.0.5',
+    version='0.0.6',
     packages=find_packages(),
     install_requires=install_requirements,
     include_package_data=True,
