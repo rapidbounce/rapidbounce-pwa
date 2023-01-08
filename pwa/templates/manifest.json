@@ -1,16 +1,15 @@
 {% load pwa %}
 {
-  "name": {{ PWA_APP_NAME|js }},
-  "short_name": {{ PWA_APP_NAME|js }},
-  "description": {{ PWA_APP_DESCRIPTION|js }},
-  "start_url": {{ PWA_APP_START_URL|js }},
-  "display": {{ PWA_APP_DISPLAY|js }},
-  "scope": {{ PWA_APP_SCOPE|js }},
-  "orientation": {{ PWA_APP_ORIENTATION|js }},
-  "background_color": {{ PWA_APP_BACKGROUND_COLOR|js }},
-  "theme_color": {{ PWA_APP_THEME_COLOR|js }},
-  "status_bar": {{ PWA_APP_STATUS_BAR_COLOR|js }},
+  "name": {{ settings.title|js }},
+  "short_name": {{ settings.title|js }},
+  "description": {{ settings.description|js }},
+  "start_url": {{ base_url|js }},
+  "display": "standalone",
+  "scope": "/",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": {{ settings.color|js }},
   "icons": {{ PWA_APP_ICONS|js }},
-  "dir": {{ PWA_APP_DIR|js }},
+  "dir": "ltr",
   "lang": {{ PWA_APP_LANG|js }}
 }
