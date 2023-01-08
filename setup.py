@@ -5,13 +5,6 @@ from setuptools import find_packages, setup
 short_description = 'A Django app to include a manifest.json and Service Worker instance to enable progressive web ' \
                     'app behavior '
 
-try:
-    import pypandoc
-
-    long_description = pypandoc.convert('README.md', 'rst')
-except ModuleNotFoundError:
-    long_description = short_description
-
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
@@ -20,18 +13,18 @@ install_requirements = [
 ]
 
 setup(
-    name='django-pwa',
-    version='1.1.0',
+    name='rapidbounce-pwa',
+    version='0.0.5',
     packages=find_packages(),
     install_requires=install_requirements,
     include_package_data=True,
     license='MIT License',
     description=short_description,
-    long_description=long_description,
+    long_description=short_description,
     long_description_content_type="text/markdown",
-    url='http://github.com/silviolleite/django-pwa',
-    author='Silvio Luis',
-    author_email='silviolleite@gmail.com',
+    url='https://github.com/rapidbounce/rapidbounce-pwa',
+    author='Panagiotis Skarlas',
+    author_email='devs@rapidbounce.co',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
